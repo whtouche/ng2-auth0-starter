@@ -8,7 +8,7 @@ import {AuthHttp} from 'angular2-jwt';
 })
 @View({
 	template: `
-	 <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}    
+	 <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}
    <h2>Chuck quote of the day</h2>
    {{quote}}
 	`
@@ -24,7 +24,7 @@ export class Profile {
   }
 
   getSecretThing() {
-    this.authHttp.get('http://localhost:3001/api/quote')
+    this.authHttp.get('http://localhost:3002/api/quote')
       .subscribe(
         data => {
           console.log(data.json());

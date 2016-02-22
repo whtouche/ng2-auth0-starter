@@ -23,7 +23,7 @@ declare var Auth0Lock;
   { path: '/profile', component: Profile, as: 'Profile' }
 ])
 export class AppComponent {
-    lock = new Auth0Lock('T1wdQrDposGW5BisaKViC0Cu9CuxtR0c', 'towfeek.eu.auth0.com');
+    lock = new Auth0Lock('d6c1qdPMNTL71HE70YeeGevhW9cnIhin', 'whtouche.auth0.com');
     jwtHelper: JwtHelper = new JwtHelper();
     location: Location;
     constructor(location: Location) {
