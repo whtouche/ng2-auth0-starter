@@ -1,8 +1,8 @@
 module.exports = function() {
 	var config = {
 		allTs: './app/**/*.ts',
-		tsOutputPath: './app/' 	
+		tsOutputPath: './build/app/'
 	};
-	
+
 	return config;
 }

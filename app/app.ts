@@ -14,7 +14,6 @@ declare var Auth0Lock;
     selector: 'my-app'
 })
 @View({
-    // templateUrl: './app/app.html',
     template: `
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">

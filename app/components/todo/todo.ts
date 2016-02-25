@@ -10,7 +10,6 @@ import {TodoItem} from '../../models';
     viewProviders: [FormBuilder]
 })
 @View({
-    // templateUrl: './app/components/todo/todo.html',
     template: `
         <div *ngFor="#todo of todos; #i=index">
             <input id="{{i}}" type="checkbox" [(checked)]="todo.completed">
