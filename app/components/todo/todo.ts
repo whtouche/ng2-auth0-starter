@@ -10,7 +10,29 @@ import {TodoItem} from '../../models';
     viewProviders: [FormBuilder]
 })
 @View({
-    templateUrl: './app/components/todo/todo.html',
+    // templateUrl: './app/components/todo/todo.html',
+    template: `
+        <div *ngFor="#todo of todos; #i=index">
+            <input id="{{i}}" type="checkbox" [(checked)]="todo.completed">
+            <label [attr.for]="i">{{todo.text}}</label>
+            <a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
+        </div>
+
+        <form [ngFormModel]="myForm" (submit)="onSubmit()" class="form-inline">
+            <div class="form-group"
+                [class.has-error]="!newTodo.valid && newTodo.dirty" [class.has-success]="newTodo.valid && newTodo.dirty">
+                <input class="form-control" placeholder="What do you need to do?" [ngFormControl]="newTodo">
+            </div>
+
+            <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
+        </form>
+
+        <input id="toggle-all" type="checkbox" (click)="toggleAll($event)">
+        <label for="toggle-all">Mark all as complete</label>
+
+        <div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
+        <div *ngIf="!newTodo.valid && newTodo.dirty" class="bg-warning">newTodo is invalid</div>
+    `,
     directives: [FORM_DIRECTIVES]
 })
 export class Todo {
