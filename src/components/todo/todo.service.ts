@@ -19,6 +19,10 @@ export class TodoService {
             JSON.stringify(todo),
             { headers: headers })
                 .map((response: Response) => response.json())
-                .subscribe((response: Response) => response);
+                .subscribe(
+                    data => console.log(data),
+                    err => console.log(err),
+                    () => console.log('newTodo Posted')
+                );
     }
 }
