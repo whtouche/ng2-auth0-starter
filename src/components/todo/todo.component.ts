@@ -1,13 +1,17 @@
 /// <reference path="../../models.ts"/>
 
-import {Component, View} from 'angular2/core';
+import {Component, View, OnInit} from 'angular2/core';
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from 'angular2/common';
 import {Validators} from 'angular2/common';
 import {TodoItem} from '../../models';
+import {TodoService} from './todo.service';
 
 @Component({
     selector: 'todo',
-    viewProviders: [FormBuilder]
+    viewProviders: [FormBuilder],
+    providers: [
+        TodoService
+    ]
 })
 @View({
     template: `
@@ -34,14 +38,24 @@ import {TodoItem} from '../../models';
     `,
     directives: [FORM_DIRECTIVES]
 })
-export class Todo {
+export class Todo implements OnInit {
+    ngOnInit() {
+        var todo = { name: 'Arnold', completed: false };
+        this._todoService.newTodo(todo);
+
+        console.log('onInit');
+        this._todoService.getTodos()
+            .subscribe(
+            response => console.log(response)
+            );
+    }
     todos: Array<TodoItem>;
 
     fb: FormBuilder;
     myForm: ControlGroup;
     newTodo: Control;
 
-    constructor(fb: FormBuilder) {
+    constructor(fb: FormBuilder, private _todoService: TodoService) {
         this.fb = fb;
         this.todos = new Array<TodoItem>();
         this.todos.push(new TodoItem('Hello world', false));

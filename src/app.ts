@@ -4,9 +4,9 @@ import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink, Location} from 
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
 import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
-import { Todo } from './components/todo/todo';
-import { About } from './components/about/about';
-import { Profile } from './components/profile/profile';
+import { Todo } from './components/todo/todo.component';
+import { About } from './components/about/about.component';
+import { Profile } from './components/profile/profile.component';
 
 declare var Auth0Lock;
 

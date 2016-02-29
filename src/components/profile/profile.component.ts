@@ -21,6 +21,7 @@ export class Profile {
   constructor(public authHttp: AuthHttp) {
     this.profile = JSON.parse(localStorage.getItem('profile'));
     this.getSecretThing();
+    this.testApi();
   }
 
   getSecretThing() {
@@ -28,10 +29,21 @@ export class Profile {
       .subscribe(
         data => {
           console.log(data.json());
-          this.quote = data.json();
+        //   this.quote = data.json();
         },
         err => console.log(err),
         () => console.log('Complete')
+      );
+  }
+  testApi() {
+    this.authHttp.get('http://localhost:3002/api/todo')
+      .subscribe(
+        data => {
+          console.log(data.json().data);
+          this.quote = data.json().info;
+        },
+        err => console.log(err),
+        () => console.log('Todo!')
       );
   }
 }
