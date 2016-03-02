@@ -16,12 +16,12 @@ export class TodoService {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this._http.post('http://localhost:3002/api/todo',
-            JSON.stringify(todo),
+            todo,
             { headers: headers })
                 .map((response: Response) => response.json())
                 .subscribe(
-                    data => console.log(data),
-                    err => console.log(err),
+                    data => console.log('data: ', data),
+                    err => console.log('err: ', err),
                     () => console.log('newTodo Posted')
                 );
     }

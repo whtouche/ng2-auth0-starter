@@ -41,7 +41,7 @@ import {TodoService} from './todo.service';
 export class Todo implements OnInit {
     ngOnInit() {
         var todo = { name: 'Arnold', completed: false };
-        this._todoService.newTodo(todo);
+        // this._todoService.newTodo(todo);
 
         console.log('onInit');
         this._todoService.getTodos()
@@ -77,7 +77,9 @@ export class Todo implements OnInit {
 
     onSubmit(): void {
         if (this.myForm.valid) {
-            this.todos.push(new TodoItem(this.newTodo.value, false));
+            var postableTodo = { name: this.newTodo.value, completed: false };
+            console.log(typeof postableTodo);
+            this._todoService.newTodo(JSON.stringify(postableTodo));
 
             // How in hell do I reset this thing and prevent it from being validated?
             // The only thing that works is rebuilding the whole form/&%¤#""
