@@ -77,8 +77,11 @@ export class Todo implements OnInit {
 
     onSubmit(): void {
         if (this.myForm.valid) {
-            var postableTodo = { name: this.newTodo.value, completed: false };
-            console.log(typeof postableTodo);
+            var postableTodo = {
+                name: this.newTodo.value,
+                completed: false
+            };
+
             this._todoService.newTodo(JSON.stringify(postableTodo));
 
             // How in hell do I reset this thing and prevent it from being validated?
