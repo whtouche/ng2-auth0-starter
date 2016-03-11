@@ -40,15 +40,6 @@ import {TodoService} from './todo.service';
 })
 export class Todo implements OnInit {
     todos: Array<TodoItem>;
-
-    ngOnInit() {
-        console.log('onInit');
-        this._todoService.getTodos()
-            .subscribe(
-                todos => this.todos = todos
-            );
-    }
-
     fb: FormBuilder;
     myForm: ControlGroup;
     newTodo: Control;
@@ -60,6 +51,15 @@ export class Todo implements OnInit {
 
         this.buildForm();
     }
+
+    ngOnInit() {
+        console.log('onInit');
+        this._todoService.getTodos()
+            .subscribe(
+                todos => this.todos = todos
+            );
+    }
+
 
     buildForm(): void {
         this.newTodo = new Control('', Validators.required);
