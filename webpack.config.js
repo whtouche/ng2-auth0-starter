@@ -8,10 +8,18 @@ module.exports = {
         extensions: ['', '.js', '.ts']
     },
     module: {
-        loaders: [{
-            test: /\.ts/,
-            loaders: ['ts-loader'],
-            exclude: /node_modules/
-        }]
+        loaders: [
+            {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader',
+                // exclude: [/\.(spec)\.ts$/]
+                exclude: [/\.e2e\.ts$/]
+            }
+            // {
+            //     test: /\.ts/,
+            //     loaders: ['ts-loader'],
+            //     exclude: /node_modules/
+            // }
+        ]
     }
 };

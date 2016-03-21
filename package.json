@@ -1,45 +1,61 @@
 {
-    "name": "ng2_play",
-    "version": "1.0.0",
-    "main": "gulpfile.js",
-    "scripts": {
-        "compile": "tsc",
-        "build": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prestart": "nodemon ./server/app.js",
-        "start": "webpack-dev-server"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ajtowf/ng2_play.git"
-    },
-    "author": "Ajden Towfeek",
-    "license": "MIT",
-    "homepage": "https://github.com/ajtowf/ng2_play#readme",
-    "devDependencies": {
-        "browser-sync": "^2.9.3",
-        "gulp": "^3.9.0",
-        "gulp-sourcemaps": "^1.5.2",
-        "gulp-tslint": "^3.2.0",
-        "gulp-typescript": "^2.10.0",
-        "superstatic": "^1.2.3",
-        "ts-loader": "^0.8.1",
-        "typescript": "1.7.5"
-    },
-    "dependencies": {
-        "angular2": "2.0.0-beta.3",
-        "angular2-jwt": "0.1.6",
-        "body-parser": "^1.15.0",
-        "cors": "2.7.1",
-        "es6-promise": "3.0.2",
-        "es6-shim": "0.33.3",
-        "express": "4.13.4",
-        "express-jwt": "3.3.0",
-        "lodash": "^4.5.1",
-        "mongoose": "^4.4.5",
-        "reflect-metadata": "0.1.2",
-        "rxjs": "5.0.0-beta.0",
-        "systemjs": "0.19.20",
-        "zone.js": "0.5.11"
-    }
+  "name": "ng2_play",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "clean": "npm cache clean && rimraf node_modules build dist",
+    "compile": "tsc",
+    "build": "webpack && npm run compile",
+    "serve": "nodemon ./server/app.js",
+    "start": "webpack-dev-server",
+    "test": "karma start",
+    "test-watch": "karma start --no-single-run --auto-watch",
+    "lint": "./node_modules/.bin/tslint 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajtowf/ng2_play.git"
+  },
+  "author": "Ajden Towfeek",
+  "license": "MIT",
+  "homepage": "https://github.com/ajtowf/ng2_play#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^0.16.2",
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tslint": "^3.2.0",
+    "gulp-typescript": "^2.10.0",
+    "istanbul-instrumenter-loader": "^0.2.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.6",
+    "rimraf": "^2.5.2",
+    "superstatic": "^1.2.3",
+    "ts-loader": "^0.8.1",
+    "tslint": "^3.6.0",
+    "typescript": "1.7.5",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.3",
+    "angular2-jwt": "0.1.6",
+    "body-parser": "^1.15.0",
+    "cors": "2.7.1",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.3",
+    "express": "4.13.4",
+    "express-jwt": "3.3.0",
+    "lodash": "^4.5.1",
+    "mongoose": "^4.4.5",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.20",
+    "zone.js": "0.5.11"
+  }
 }
