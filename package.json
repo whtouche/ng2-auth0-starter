@@ -1,7 +1,6 @@
 {
-  "name": "ng2_play",
+  "name": "ng2-auth0-starter",
   "version": "1.0.0",
-  "main": "gulpfile.js",
   "scripts": {
     "clean": "npm cache clean && rimraf node_modules build dist",
     "compile": "tsc",
@@ -10,15 +9,15 @@
     "start": "webpack-dev-server",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch",
-    "lint": "./node_modules/.bin/tslint 'src/**/*.ts'"
+    "lint": "./node_modules/.bin/tslint 'app/**/*.ts'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajtowf/ng2_play.git"
+    "url": "git+https://github.com/whtouche/ng2-auth0-starter"
   },
-  "author": "Ajden Towfeek",
+  "author": "Ben White",
   "license": "MIT",
-  "homepage": "https://github.com/ajtowf/ng2_play#readme",
+  "homepage": "https://github.com/whtouche/ng2-auth0-starter",
   "devDependencies": {
     "awesome-typescript-loader": "^0.16.2",
     "istanbul-instrumenter-loader": "^0.2.0",
