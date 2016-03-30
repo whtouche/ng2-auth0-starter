@@ -6,7 +6,7 @@
     "compile": "tsc",
     "build": "webpack && npm run compile",
     "serve": "nodemon ./server/app.js",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --port 3000",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch",
     "lint": "./node_modules/.bin/tslint 'app/**/*.ts'"
