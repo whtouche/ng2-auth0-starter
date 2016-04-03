@@ -17,7 +17,6 @@ Run the following commands to run the application
 - 'Client ID', 'Domain'
 - lock = new Auth0Lock('d6c1qdPMNTL71HE70YeeGevhW9cnIhin', 'whtouche.auth0.com');
 
----
 ## License
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
