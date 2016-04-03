@@ -17,7 +17,7 @@ import {Http, Response, Headers, HTTP_PROVIDERS, XHRBackend} from 'angular2/http
 
 import {provide} from 'angular2/core';
 import {TodoService} from './todo.service';
-import {TodoItem} from '../../models';
+import {TodoItem} from '../models';
 import {MockConnection} from 'angular2/src/http/backends/mock_backend';
 
 describe('MyService Service', () => {

@@ -1,9 +1,9 @@
-/// <reference path="../../models.ts"/>
+/// <reference path="../models.ts"/>
 
 import {Component, View, OnInit} from 'angular2/core';
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from 'angular2/common';
 import {Validators} from 'angular2/common';
-import {TodoItem} from '../../models';
+import {TodoItem} from '../models';
 import {TodoService} from './todo.service';
 
 @Component({
