@@ -29,7 +29,7 @@ export class Profile {
             .subscribe(
             data => {
                 console.log(data.json());
-                //   this.quote = data.json();
+                  this.quote = data.json();
             },
             err => console.log(err),
             () => console.log('Complete')
