@@ -40,7 +40,7 @@ Navigate to [http://localhost:3000/](http://localhost:3000/)
 
 ## Contributing
 
-Do you want to help? That would be great. Check out the [issues](https://github.com/whtouche/ng2-auth0-starter/issues), there are definitely some things that I haven't figured out yet. Pull requests are welcome and encouraged.
+Do you want to help? That would be great - this is still a work in progress. Check out the [issues](https://github.com/whtouche/ng2-auth0-starter/issues), there are definitely some things that I haven't figured out yet. Pull requests are welcome and encouraged.
 
 ## Acknowledgements
 
