@@ -19,7 +19,7 @@ Add your [Auth0](https://auth0.com/) account information to the following files:
 
 #### app.ts
 
-- on the "lock = new Auth0Lock" line, add your 'Client ID' and 'Domain'
+- On the "lock = new Auth0Lock" line, add your 'Client ID' and 'Domain'
 
 
 Install the dependencies:
