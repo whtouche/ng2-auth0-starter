@@ -1,4 +1,4 @@
-## Angular 2 Play
+## Angular 2 Auth0 Express MongoDB CRUD Starter
 
 This repo uses Angular 2 Beta 3.
 
