@@ -2,33 +2,40 @@
 
 This repo uses Angular 2 Beta 3.
 
-Run the following commands to run the application
+### Getting Started
 
-    npm install
-    gulp
+Go to [Auth0](https://auth0.com/) and create a new application (you'll need to create an account if you don't already have one - it's free)
 
-## Auth0.json
+The information you need can be found under the "Settings" tab after you create a new app - it will look like this:
 
-- secret = client secret
-- audience = client id
+![Auth0 Screenshot](app/assets/images/ng2-auth0-crud-starter.png)
 
-## app.ts
+Add your [Auth0](https://auth0.com/) account information to the following files:
 
-- 'Client ID', 'Domain'
-- lock = new Auth0Lock('d6c1qdPMNTL71HE70YeeGevhW9cnIhin', 'whtouche.auth0.com');
+#### Auth0.json
+
+- secret = Client Secret
+- audience = Client ID
+
+#### app.ts
+
+- on the "lock = new Auth0Lock" line, add your 'Client ID' and 'Domain'
+
+
+Install the dependencies:
+
+    $ npm install
+
+Compile the TypeScript into JavaScript and create the bundle:
+
+    $ npm run build
+
+In **_separate_** terminal windows, run the mongo daemon, start the Express server, and start the webpack-dev-server:
+
+    $ mongod
+    $ npm run serve
+    $ npm start
 
 ## License
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-Version 2, December 2004
-
-Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
-
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
-
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-0. You just DO WHAT THE FUCK YOU WANT TO.
+[WTFPL](LICENSE.md)
