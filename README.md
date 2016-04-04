@@ -38,6 +38,18 @@ In **_separate_** terminal windows, run the mongo daemon, start the Express serv
 
 Navigate to [http://localhost:3000/](http://localhost:3000/)
 
+## Contributing
+
+Do you want to help? That would be great. Check out the [issues](https://github.com/whtouche/ng2-auth0-starter/issues), there are definitely some things that I haven't figured out yet. Pull requests are welcome and encouraged.
+
+## Acknowledgements
+
+This project owes a ton to Ajden Towfeek, please check out his YouTube channel for some of the best instructional videos on Angular 2 that I have found:
+- [https://www.youtube.com/channel/UCDS3sAwfomuOa0hRvd9De7A](https://www.youtube.com/channel/UCDS3sAwfomuOa0hRvd9De7A)
+- [https://github.com/ajtowf](https://github.com/ajtowf)
+- [https://twitter.com/ajtowf](https://twitter.com/ajtowf)
+- [https://www.pluralsight.com/authors/ajden-towfeek](https://www.pluralsight.com/authors/ajden-towfeek)
+
 ## License
 
 [WTFPL](LICENSE.md)
