@@ -36,6 +36,8 @@ In **_separate_** terminal windows, run the mongo daemon, start the Express serv
     $ npm run serve
     $ npm start
 
+Navigate to [http://localhost:3000/](http://localhost:3000/)
+
 ## License
 
 [WTFPL](LICENSE.md)
