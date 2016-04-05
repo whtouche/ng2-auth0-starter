@@ -2,9 +2,19 @@
 
 This repo uses Angular 2 Beta 3.
 
+### Prerequisites
+
+Before getting started you will need the following things:
+- MongoDB
+- Node.js / NPM
+- An [Auth0](https://auth0.com/) account (they're free)
+
+I assume if you've found your way here you at least have the first two already taken care of.
+
 ### Getting Started
 
-Go to [Auth0](https://auth0.com/) and create a new application (you'll need to create an account if you don't already have one - it's free)
+
+Go to [Auth0](https://auth0.com/) and create a new application
 
 The information you need can be found under the "Settings" tab after you create a new app - it will look like this:
 
